@@ -20,6 +20,7 @@ default = ["openblas"]
 accelerate = ["lapack-sys/accelerate"]
 netlib = ["lapack-sys/netlib"]
 openblas = ["lapack-sys/openblas"]
+intel-mkl = ["lapack-sys/intel-mkl"]
 
 [dependencies]
 libc = "0.2"
@@ -29,5 +30,6 @@ version = "0.1"
 default-features = false
 
 [dependencies.lapack-sys]
-version = "0.11"
+git = "https://github.com/termoshtt/lapack-sys"
+branch = "intel-mkl"
 default-features = false
